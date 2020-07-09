@@ -1,0 +1,931 @@
+object DataModulePlanillasProvinciales: TDataModulePlanillasProvinciales
+  OldCreateOrder = False
+  Left = 212
+  Top = 168
+  Height = 542
+  Width = 760
+  object DataSourceExistePlanillaProvincial: TDataSource
+    AutoEdit = False
+    DataSet = ADOStoredProcExistePlanillaProvincial
+    Left = 336
+    Top = 2
+  end
+  object ADOStoredProcInsertarPlanillaProvincial: TADOStoredProc
+    Connection = DataModuleConexionGeneral.ADOConnectionGeneral
+    DataSource = DataSourceSelecTodo
+    ProcedureName = 'InsertarPlanillaProvincial;1'
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@vanno'
+        Attributes = [paNullable]
+        DataType = ftSmallint
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vprovincia'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 2147483647
+        Value = '0'
+      end
+      item
+        Name = '@vTotalEntOrg'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vEntOrgConPlanAnualCap'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalTrabOrg'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalGradAccCap'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vRelacionGradXTotal'
+        Attributes = [paNullable]
+        DataType = ftFloat
+        Precision = 15
+        Value = 0.000000000000000000
+      end
+      item
+        Name = '@vGradEnEmpInternas'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnInstExternas'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vDirectivos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTecnicos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vAdministrativos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTrabServicios'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vOperarios'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnCurHab'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnCurPerfec'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradenAdiestLab'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnEntPTrab'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnCurPostGrado'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnDiplomados'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnMaestrias'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnDoctorados'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnCurFormCompMINED'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnCurFormCompMES'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnCurIdiomaExt'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnCurComp'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnEntrenEnExt'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGradEnOtrasAcc'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vInstTotalUtilEnCapac'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vInstEventUtilEnCapac'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vInstPermUtilEnCapac'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vMaestriasXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vDiplomadosXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCurPostgradosXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCurIdiomasXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCurCompXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vHabilitacionXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vPerfecXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTallSemConfXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vMaestriasXGrad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vDiplomadosXGrad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCurPostGradosXGrad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCurIdiomasXGrad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCurCompXGrad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vHabilitacionXGrad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vPerfecXGrad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTallSemConfXGrad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalXGrad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vValTrabDesPorEscRamales'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 2147483647
+        Value = '0'
+      end
+      item
+        Name = '@vTotalTrabNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoIdoneosSinCalificFormal'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoIdoneosSinEficiencia'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoIdoneosSinBConducta'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGrado6XTotalNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGrado9XTotalNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGrado12XTotalNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTecMedioXTotalNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNivSupXTotalNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalNivelXTotalNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGrado6XMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGrado9XMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGrado12XMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTecMedioXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNivSupXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalNivelXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGrado6XNoMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGrado9XNoMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vGrado12XNoMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTecMedioXNoMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNivSupXNoMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalNivelXNoMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalTrabProxEdadJub'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalTrabProblemasSalud'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalLicEnfermedadYMaternidad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalTrabProblemasFamiliares'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalNoDisponibMatricXMINED'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalNoDisponibMatricXMES'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalLimMatricNivSup'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalImposibEntidAbrirAulas'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalTrabNoAcredit'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalTrabTurnosRotativos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalTrabNieganIncorp'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalMovilConstruc'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoFormalOtrasCausas'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vExplicNoMatric'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 2147483647
+        Value = '0'
+      end
+      item
+        Name = '@vCurHabilXTotalNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vEntrenamientoXTotalNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalNoIdoneosXTotalNoIdoneos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCurHabilXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vEntrenamientoXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalNoIdoneosXMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCurHabilXNoMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vEntrenamientoXNoMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalNoIdoneosXNoMatric'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoEficTrabProxEdadJub'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoEficTrabProblemasSalud'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoEficLicEnfermedadYMaternidad'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoEficTrabProblemasFamiliares'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoEficTrabTurnosRotativos'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoEficTrabNieganIncorp'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoEficMovilConstruc'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vNoEficOtrasCausas'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCasilla1XPendiente'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCasilla2XPendiente'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vTotalXPendiente'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@vCasilla1XCausas'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 2147483647
+        Value = '0'
+      end
+      item
+        Name = '@vCasilla2XCausas'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 2147483647
+        Value = '0'
+      end
+      item
+        Name = '@vTotalXCausas'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 2147483647
+        Value = '0'
+      end
+      item
+        Name = '@vValoracionCualitativaDelProcesoCapac'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 2147483647
+        Value = '0'
+      end>
+    Left = 568
+    Top = 2
+  end
+  object ADOStoredProcExistePlanillaProvincial: TADOStoredProc
+    Connection = DataModuleConexionGeneral.ADOConnectionGeneral
+    ProcedureName = 'ExistePlanillaProvincial;1'
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@vanno'
+        Attributes = [paNullable]
+        DataType = ftSmallint
+        Precision = 5
+        Value = Null
+      end
+      item
+        Name = '@vprovincia'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 2147483647
+        Value = Null
+      end>
+    Left = 104
+    Top = 2
+  end
+  object ADOStoredProcSelectTodoPorProvincia: TADOStoredProc
+    Connection = DataModuleConexionGeneral.ADOConnectionGeneral
+    ProcedureName = 'SelectTodoPorProvincia;1'
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = 0
+      end
+      item
+        Name = '@vprovincia'
+        DataType = ftString
+        Size = 2147483647
+        Value = Null
+      end>
+    Left = 104
+    Top = 69
+  end
+  object DataSourceSelecTodo: TDataSource
+    DataSet = ADOStoredProcSelectTodoPorProvincia
+    Left = 336
+    Top = 69
+  end
+  object ADOStoredProcEliminarPlanillaProvincial: TADOStoredProc
+    Connection = DataModuleConexionGeneral.ADOConnectionGeneral
+    ProcedureName = 'EliminarPlanillaProvincial;1'
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@vanno'
+        Attributes = [paNullable]
+        DataType = ftSmallint
+        Precision = 5
+        Value = Null
+      end
+      item
+        Name = '@vprovincia'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 2147483647
+        Value = Null
+      end>
+    Left = 568
+    Top = 69
+  end
+  object ADOStoredProcSelecResumen: TADOStoredProc
+    Connection = DataModuleConexionGeneral.ADOConnectionGeneral
+    ProcedureName = 'SelecResumen;1'
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = 0
+      end
+      item
+        Name = '@vanno'
+        Attributes = [paNullable]
+        DataType = ftSmallint
+        Precision = 5
+        Value = 0
+      end>
+    Left = 104
+    Top = 138
+  end
+  object DataSourceSelecResumen: TDataSource
+    DataSet = ADOStoredProcSelecResumen
+    Left = 336
+    Top = 138
+  end
+  object ADOStoredProcSelecResumenAmpliadoProvincial: TADOStoredProc
+    Connection = DataModuleConexionGeneral.ADOConnectionGeneral
+    ProcedureName = 'SelecResumenAmpliadoProvincial;1'
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@vanno'
+        Attributes = [paNullable]
+        DataType = ftSmallint
+        Precision = 5
+        Value = 0
+      end>
+    Left = 105
+    Top = 218
+  end
+  object DataSourceSelecResumenAmpliadoProvincial: TDataSource
+    DataSet = ADOStoredProcSelecResumenAmpliadoProvincial
+    Left = 336
+    Top = 218
+  end
+end
